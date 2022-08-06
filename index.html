@@ -1,8 +1,42 @@
-<html lang="en" data-color-mode="light" data-light-theme="light" data-dark-theme="dark" data-a11y-animated-images="system" data-turbo-loaded="">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
+		<title>Desafío 1 - Encriptador</title>
+		<script src="js/funciones.js"></script>
+		<link rel="stylesheet" href="css/index.css" />
 	</head>
-	<body>
-		Hola 2 :D
+	<body id="cuerpo" cz-shortcut-listen="true">  
+		<section class="areaIngresoTexto">
+			<header>
+				<img src="src/Logo.png" alt="Letra A de Alura">
+			</header>
+			<div class="texto">
+				<textarea id="areaText" type="text" placeholder="Ingrese el texto aquí" autofocus=""></textarea>
+				<p>
+					Solo letras minúsculas y sin acentos
+				</p>
+				<div class="buttonsPrincipales">
+					<input id="Encriptar" class="botonCodificar" type="button" value="Encriptar">
+					<input id="Desencriptar" class="botonDecodificar" type="button" value="Desencriptar">
+				</div>
+			</div>
+		</section>
+		<section class="SalidaTexto">
+			<textarea id="mensajeFinal" class="mensajeFinal"></textarea>
+			<div id="diamante">
+				<img src="src/Muñeco.png" alt="Persona buscando un diamante"/>
+				<h1>Ningún mensaje fue encontrado</h1>
+				<p>
+					Ingresa el texto que desees codificar o decodificar
+				</p>
+			</div>
+			<input id="Copiar" class="buttonCopiar" type="button" value="Copiar" />
+		</section>
+		<script>
+			document.getElementById("Encriptar").onclick = Encriptar;
+			document.getElementById("Desencriptar").onclick = Desencriptar;
+			document.getElementById("Copiar").onclick = Copiar;
+		</script>
 	</body>
 </html>
